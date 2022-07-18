@@ -615,3 +615,10 @@ MonoBehaviour:
   whatCanbeClickedOn:
     serializedVersion: 2
     m_Bits: 256
+  anim: {fileID: 1661587391}
+  Is_walk: 0
+--- !u!95 &1661587391 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95320324289322388, guid: 8e0f285c21cdcf14e8d5c06c57ba936b, type: 3}
+  m_PrefabInstance: {fileID: 761104033}
+  m_PrefabAsset: {fileID: 0}

@@ -7,11 +7,14 @@ public class Player : MonoBehaviour
 {   
     public LayerMask whatCanbeClickedOn;
     private NavMeshAgent agent;
+    public Animator anim;
+    public bool Is_walk;
     
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+
         
     }
 
@@ -28,5 +31,14 @@ public class Player : MonoBehaviour
                 agent.SetDestination(hitInfo.point);
             }
         }
+        if (agent.remainingDistance <= agent.stoppingDistance)
+        {
+            Is_walk = false;
+        }
+        else
+        {
+            Is_walk = true;
+        }
+        anim.SetBool("Is_walk", Is_walk);
     }
 }
